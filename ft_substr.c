@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:38:35 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/02 16:24:39 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/02 16:49:56 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s + start) < len)
 		len = ft_strlen(s + start);
 	new_str = malloc(len + 1);
+	if (new_str == NULL)
+		return (NULL);
 	ft_strlcpy(new_str, s + start, len + 1);
 	return (new_str);
 }

@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:18:14 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/02 14:37:44 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/02 16:53:25 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*array;
 
 	array = malloc(count * size);
+	if (array == NULL)
+		return (NULL);
 	ft_bzero(array, count * size);
 	return (array);
 }
