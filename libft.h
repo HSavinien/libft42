@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:38:12 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/08 15:35:21 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:14:20 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);//WARNING : function not finished=====
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *c, int fd);
+void	ft_putendl_fd(char *c, int fd);
+void	ft_putnbr_fd(int n, int fd);
 //functions from bonus
 
 //additional functions (not mandatory, but still used)
