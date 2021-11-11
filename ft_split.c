@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:54:11 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/08 15:27:40 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:22:40 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 // function that give the number of substring in the original string to split
-int	ft_count_str(char const *s, char c)
+static int	ft_count_str(char const *s, char c)
 {
 	int	i;
 	int	nb_str;
@@ -33,7 +33,7 @@ int	ft_count_str(char const *s, char c)
 }
 
 // function that give a pointer one the first char of the num^th substr of s.
-char	*ft_find_substr(char const *s, char sep, int num)
+static char	*ft_find_substr(char const *s, char sep, int num)
 {
 	int		i;
 	int		curent_str;
@@ -53,7 +53,7 @@ char	*ft_find_substr(char const *s, char sep, int num)
 	return ((char *)(s + i));
 }
 
-char	*ft_get_substr(char const *s, char sep, int num)
+static char	*ft_get_substr(char const *s, char sep, int num)
 {
 	char	*str;
 	int		i;

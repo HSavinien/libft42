@@ -6,14 +6,14 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:06:31 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/02 19:29:30 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:20:47 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_is_in_str(char c, const char *str)
+static int	ft_is_in_str(char c, const char *str)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	ft_is_in_str(char c, const char *str)
 	return (0);
 }
 
-size_t	ft_get_final_lenght(char const *s1, char const *set)
+static size_t	ft_get_final_lenght(char const *s1, char const *set)
 {
 	int		i;
 	size_t	len;

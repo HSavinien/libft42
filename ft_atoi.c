@@ -6,13 +6,13 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:33:02 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/01 18:02:44 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:19:31 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ')
 		return (1);
