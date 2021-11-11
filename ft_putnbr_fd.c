@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:48:54 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/11 14:48:22 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/11 14:57:09 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_handlenegative(int n, int fd)
 	if (n == -2147483648)
 	{
 		write(fd, "-2", 2);
-		return (n *-10);
+		return (147483648);
 	}
 	else
 	{
