@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:54:11 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/11 14:22:40 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:21:43 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	ft_count_str(char const *s, char c)
 	int	i;
 	int	nb_str;
 
+	if (ft_strlen(s) == 0)
+		return (0);
 	i = 1;
 	nb_str = 1;
 	while (s[i])
