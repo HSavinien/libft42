@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:48:54 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/11 14:57:09 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:29:23 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_handlenegative(int n, int fd)
 	}
 }
 
-static char ft_get_digit(int n)
+static char	ft_get_digit(int n)
 {
 	return ((n % 10) + '0');
 }
@@ -39,7 +39,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 		n = ft_handlenegative(n, fd);
 	if (n >= 10)
-		ft_putnbr_fd(n / 10 , fd);
+		ft_putnbr_fd(n / 10, fd);
 	digit = ft_get_digit(n);
 	write(fd, &digit, 1);
 }
