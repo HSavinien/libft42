@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 18:16:55 by tmongell          #+#    #+#             */
-/*   Updated: 2021/10/30 18:16:58 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:10:00 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,35 @@ int	main(int argc, char **argv)
 		return (printf("error args\nusage : %s <dst> <src> <len>\n", argv[0]));
 	len = atoi(argv[3]);
 	src = argv[2];
-	dst = malloc(len);
-	ref_dst = malloc(len);
-	strlcpy(dst, argv[1], len);
-	strlcpy(ref_dst, argv[1], len);
+	dst = malloc(strlen(argv[1]) + len);
+	ref_dst = malloc(strlen(argv[1]) + len);
+	strlcpy(dst, argv[1], strlen(argv[1]) + 1);
+	strlcpy(ref_dst, argv[1], strlen(argv[1]) + 1);
 	printf("expected result	: "
 		"concatened dst and src, now dst is %s, of lenght %lu\n",
 		ref_dst, REF_FCT(ref_dst, src, len));
 	printf("actual result	: "	
 		"concatened dst and src, now dst is %s, of lenght %lu\n",
 		dst, TEST_FCT(dst, src, len));
-	printf ("\n\n");
+	printf ("\n");
 }
+/*
+int main(void)
+{
+	int		i;
+	char	*src;
+	char	*dst;
+	int		output;
+
+	src = strdup("lol");
+	i = 0;
+	while (i <= 15)
+	{
+		dst = strdup("coucou ");
+		output = strlcat(dst, src, i);
+		printf("for i = %d, result is %s and return value is %d\n", i, dst, output);
+		free(dst);
+		i ++;
+	}
+}
+*/
