@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:38:12 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/12 15:11:00 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:51:14 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);//tri,njj==============KO
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);//tri=============KO
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);//tri,njj=========KO
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);//tri,njj===============================KO
