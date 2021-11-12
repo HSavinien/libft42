@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 13:20:05 by tmongell          #+#    #+#             */
-/*   Updated: 2021/10/30 17:28:48 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/12 15:45:35 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		j++;
 		i++;
 	}
-	if (i < dstsize)
-		dst[i + 1] = '\0';
+	dst[i] = '\0';
 	return (ft_strlen(src) + i - j);
 }
