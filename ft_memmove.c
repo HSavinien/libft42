@@ -6,11 +6,19 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:36:52 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/15 16:53:36 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/15 19:46:12 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_min(int nb1, int nb2)
+{
+	if (nb1 < nb2)
+		return (nb1);
+	else
+		return (nb2);
+}
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -29,10 +37,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		if (ft_strlen(src) < len)
-			i = ft_strlen(src);
-		else
-			i = len;
+		i = ft_min(ft_strlen(src), len);
 		while (i > 0)
 		{
 			*((char *)dst + i) = *((char *)src + i);

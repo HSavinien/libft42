@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:36:11 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/15 18:44:15 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/15 19:41:38 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (str1[i] == str2[i] && i < n - 1)
 	{
-//		printf("debug : str1 = %s, str2 = %s", str1, str2);
 		i ++;
 	}
 	return (str1[i] - str2[i]);
