@@ -68,6 +68,9 @@ fclean:	clean
 re:			fclean all
 
 bonus:
-			@echo "no bonus yet!!!"
+			make MAKEBONUS=1 all
+
+vimall:
+			vim ${SRCS}
 
 .PHONY:	all clean fclean re
