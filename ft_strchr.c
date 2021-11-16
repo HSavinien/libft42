@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 18:14:42 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/15 17:29:44 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:23:34 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 
+	if (c < 0 || c > 127)
+		return (NULL);
 	if (c == '\0')
 		return ((char *)(s + ft_strlen(s)));
 	i = 0;
