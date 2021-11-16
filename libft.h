@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:38:12 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/16 17:56:50 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/16 19:40:25 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,5 @@ void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
 //additional functions (not mandatory, but still used)
 char	*ft_strndup(const char *s1, size_t n);
+void    *ft_memdup(const void *memory);
 #endif
