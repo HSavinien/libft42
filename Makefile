@@ -34,7 +34,7 @@ SRCS	= ft_isdigit.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 
-OBJS	= ${SRCS:.c=.o}
+SOBJS	= ${SRCS:.c=.o}
 
 BONUS	= ft_lstnew.c \
 
@@ -42,7 +42,11 @@ BOBJS	= ${BONUS:.c=.o}
 
 ifdef MAKEBONUS
 
-	OBJS = ${OBJS} ${BOBJS}
+	OBJS = ${SOBJS} ${BOBJS}
+
+else
+
+	OBJS = ${SOBJS}
 
 endif
 
@@ -60,7 +64,8 @@ ${NAME}:	${OBJS}
 all:		${NAME}
 
 clean:
-			rm -f ${OBJS}
+			rm -f ${SOBJS}
+			rm -f ${BOBJS}
 
 fclean:	clean
 			rm -f ${NAME}
@@ -69,8 +74,5 @@ re:			fclean all
 
 bonus:
 			make MAKEBONUS=1 all
-
-vimall:
-			vim ${SRCS}
 
 .PHONY:	all clean fclean re
