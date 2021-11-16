@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:36:52 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/16 17:45:58 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:51:26 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*((char *)dst + i) = *((char *)src + i);
 			i ++;
 		}
-		*((char *)dst + i) = *((char *)src + i);
 	}
 	else
 	{
