@@ -37,7 +37,6 @@ SRCS	= ft_isdigit.c \
 SOBJS	= ${SRCS:.c=.o}
 
 BONUS	= ft_lstnew.c \
-		  ft_memdup.c \
 
 BOBJS	= ${BONUS:.c=.o}
 
