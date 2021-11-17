@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   test_ft_lstnew.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 13:33:03 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/17 13:25:05 by tmongell         ###   ########.fr       */
+/*   Created: 2021/11/16 19:55:00 by tmongell          #+#    #+#             */
+/*   Updated: 2021/11/17 13:24:36 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 #include <stdlib.h>
+#include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	main(int argc, char **argv)
 {
-	t_list	*new_lst;
+	char	*str;
+	t_list	*lst;
 
-	new_lst = (t_list *)malloc(sizeof (t_list));
-	new_lst->content = content;
-	new_lst->next = NULL;
-	return (new_lst);
+	if (argc != 2)
+		return (printf("error args\nusage : %s <str>\n", argv[0]));
+	str = argv[1];
+	lst = ft_lstnew(str);
+	printf("new list element created. content : %s\n", lst->content);
+	return (0);
 }
