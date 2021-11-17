@@ -39,6 +39,7 @@ SOBJS	= ${SRCS:.c=.o}
 BONUS	= ft_lstnew.c \
 		  ft_lstadd_front.c \
 		  ft_lstsize.c \
+		  ft_lstlast.c \
 
 BOBJS	= ${BONUS:.c=.o}
 
