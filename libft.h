@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:38:12 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/17 13:37:38 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/17 15:13:54 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	ft_putendl_fd(char *c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 //functions from bonus
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **alst, t_list *new);
 //additional functions (not mandatory, but still used)
 char	*ft_strndup(const char *s1, size_t n);
 #endif
