@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:38:12 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/17 18:05:04 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/18 18:05:10 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	ft_lstadd_front(t_list **alst, t_list *new);
 int		ft_lstsize(t_list	*lst);
 t_list	*ft_lstlast(t_list	*lst);
 void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 //additional functions (not mandatory, but still used)
 char	*ft_strndup(const char *s1, size_t n);
 #endif
