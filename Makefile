@@ -80,9 +80,4 @@ re:			fclean all
 bonus:
 		make MAKEBONUS=1 all
 
-norm:		#this rule only exist for experiment. it would be cheating to use it
-		@echo "${SRCS:.c=.c: OK!\n}\c"
-		@echo "${BONUS:.c=.c: OK!\n}\c"
-		@echo "libft.h: OK!"
-
 .PHONY:	all clean fclean re
